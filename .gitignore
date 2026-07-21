@@ -1,0 +1,9 @@
+# Compiled executables
+bike_analytics
+test_analytics
+
+# Object files
+*.o
+
+# macOS
+.DS_Store
