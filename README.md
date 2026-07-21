@@ -2,18 +2,18 @@
 
 A C command-line program that reads bike-sharing trips from a CSV file and produces a monthly report.
 
-The program was built to practice file handling, structures, arrays, pointers and modular programming in C.
+The project demonstrates file handling, structures, arrays, pointers, validation, and modular programming in C.
 
 ## Features
 
 - Reads trip data from a CSV file
-- Checks invalid records
+- Checks and skips invalid records
 - Counts trips for each month from January to June
 - Finds the longest trip of each month
 - Finds the shortest trip of each month
 - Calculates total and average trip duration
 - Finds the busiest month
-- Includes a small test file
+- Includes a small automated test
 
 ## Technologies
 
@@ -27,18 +27,19 @@ The program was built to practice file handling, structures, arrays, pointers an
 ```text
 bike-sharing-trip-analytics/
 ├── data/
-│   └── sample_trips.csv
+│ └── sample_trips.csv
 ├── include/
-│   ├── analytics.h
-│   ├── file_reader.h
-│   └── trip.h
+│ ├── analytics.h
+│ ├── file_reader.h
+│ └── trip.h
 ├── src/
-│   ├── analytics.c
-│   ├── file_reader.c
-│   ├── main.c
-│   └── trip.c
+│ ├── analytics.c
+│ ├── file_reader.c
+│ ├── main.c
+│ └── trip.c
 ├── tests/
-│   └── test_analytics.c
+│ └── test_analytics.c
+├── .gitignore
 ├── Makefile
 └── README.md
 ```
@@ -51,7 +52,7 @@ TRIP001,05/01/2026,18
 TRIP002,12/01/2026,42
 ```
 
-The date format is `dd/mm/yyyy` and duration is in minutes.
+The date format is `dd/mm/yyyy` and duration is expressed in minutes.
 
 ## Compile
 
@@ -87,9 +88,9 @@ All tests passed.
 
 The project is divided into separate files:
 
-- `file_reader.c` reads the CSV file.
-- `trip.c` checks trip data and extracts the month.
-- `analytics.c` calculates the monthly statistics.
-- `main.c` calls the functions and prints the report.
+- `file_reader.c` reads and validates the CSV data.
+- `trip.c` checks trip records and extracts the month.
+- `analytics.c` calculates monthly and general statistics.
+- `main.c` calls the functions and prints the final report.
 
-The longest and shortest trips are stored using pointers to the original trip array.
+The longest and shortest trips are stored using pointers to the original trip array
