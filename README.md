@@ -27,40 +27,6 @@ The report includes:
 
 The program is separated into small C modules for file reading, trip validation, analytics and output.
 
-## Quick Start
-
-### Requirements
-
-- GCC
-- Make
-
-### Build and run
-
-```bash
-git clone https://github.com/awmiryaw/bike-sharing-trip-analytics.git
-cd bike-sharing-trip-analytics
-make
-make run
-```
-
-### Run with another CSV file
-
-```bash
-./bike_analytics path/to/trips.csv
-```
-
-### Run the tests
-
-```bash
-make test
-```
-
-Expected result:
-
-```text
-All tests passed.
-```
-
 ## Features
 
 | Feature | Description |
@@ -154,6 +120,39 @@ flowchart LR
 - Invalid records are skipped so one bad CSV row does not stop the full analysis.
 - The analytics logic is separated from file input so it can be tested independently.
 
+## Quick Start
+
+### Requirements
+
+- GCC
+- Make
+
+### Build and run
+
+```bash
+git clone https://github.com/awmiryaw/bike-sharing-trip-analytics.git
+cd bike-sharing-trip-analytics
+make
+make run
+```
+
+### Run with another CSV file
+
+```bash
+./bike_analytics path/to/trips.csv
+```
+
+### Run the tests
+
+```bash
+make test
+```
+
+Expected result:
+
+```text
+All tests passed.
+```
 ## Commands
 
 | Command | Action |
